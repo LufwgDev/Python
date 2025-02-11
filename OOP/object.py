@@ -1,7 +1,10 @@
 class People:
-    def hi(self,name):
-        print("Hi " + name)
+    def __init__(self, name):
+        self.name = name
 
-hector = People()
+    def hi(self):
+        print("Hi " +  self.name)
 
-hector.hi("Hector")
+hector = People("Hector")
+
+hector.hi()
