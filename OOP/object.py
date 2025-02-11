@@ -1,7 +1,7 @@
 class People:
-    def hi(self):
-        print("Hi World")
+    def hi(self,name):
+        print("Hi " + name)
 
 hector = People()
 
-hector.hi()
+hector.hi("Hector")
