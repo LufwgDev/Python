@@ -34,6 +34,16 @@ class People:
         print("something")
 
 
+class Bartender(People):
+    pass
+    def welcome(self):
+        print("Welcome")
+
+class Student(People):
+    def __init__(self,name,age,career):
+        super().__init__(name,age)
+        self.career=career
+
 
 #creating an instance of the method
 hector = People("Hector",21)
@@ -70,4 +80,13 @@ print(hector.get_age())
 #    hector.__some()
 #    ^^^^^^^^^^^^^
 #AttributeError: 'People' object has no attribute '__some'
+
+bart = Bartender("bart",12)
+bart.hi()
+bart.welcome()
+
+lu = Student("Lu",21,"Engineer")
+lu.hi()
+print(lu.career)
+
 
