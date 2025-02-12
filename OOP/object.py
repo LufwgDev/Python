@@ -4,10 +4,12 @@ class People:
     className = "People"
 
     #Constructor
-    def __init__(self, name: str): #: str is a type hint that means string
+    def __init__(self, name: str, age: int): #: str is a type hint that means string
         #field that can only be called from the objects
         self.name = name
+        self.__age = age
 
+        
     #Method
     def hi(self):
         print("Hi " +  self.name)
@@ -23,9 +25,18 @@ class People:
     def holaMundo(cls):
         print("Hola Mundo")
         print("Hi" + cls.className)
+    
+    #can acces to private fields and return it
+    def get_age(self):
+        return self.__age
+
+    def __some(self):
+        print("something")
+
+
 
 #creating an instance of the method
-hector = People("Hector")
+hector = People("Hector",21)
 
 #calling a method form the object
 hector.hi()
@@ -40,4 +51,23 @@ People.helloWorld()
 #testing access to class' classmethods from object and class
 hector.holaMundo()
 People.holaMundo()
+
+#
+print(hector.name) #print "Hector"
+
+#print(hector.age) 
+#Traceback (most recent call last):
+#  File "C:\Users\Estudiante\Desktop\Python\OOP\object.py", line 47, in <module>
+#    print(hector.age)
+#          ^^^^^^^^^^
+#AttributeError: 'People' object has no attribute 'age'
+
+print(hector.get_age())
+
+#hector.__some()
+#Traceback (most recent call last):
+#  File "C:\Users\Estudiante\Desktop\Python\OOP\object.py", line 67, in <module>     
+#    hector.__some()
+#    ^^^^^^^^^^^^^
+#AttributeError: 'People' object has no attribute '__some'
 
