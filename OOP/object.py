@@ -49,7 +49,7 @@ class Student(People):
 
     #overriding the inherited method
     def hi(self):
-        print("Hi, I am "+self.name+"and I'm an "+self.career)
+        print("Hi, I am "+self.name+" and I'm an "+self.career)
 
 
 #creating an instance of the method
@@ -101,4 +101,14 @@ lu.hi()
 #getting a field that the People class do not have.
 print(lu.career)
 
+#polymorfism
+#the funtion invoke the hi method from the object that receives as a parameter
+def show(person):
+    person.hi()
 
+
+juan=People("Juan",13)
+#
+show(juan)
+#diferent objects of diferent classes can have diferent behaviors when invoking the same method
+show(lu)
