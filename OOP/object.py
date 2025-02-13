@@ -33,16 +33,23 @@ class People:
     def __some(self):
         print("something")
 
-
+#class with inherited cosntructor
 class Bartender(People):
     pass
     def welcome(self):
         print("Welcome")
 
+#class that modifies the inherited cosntructor
 class Student(People):
     def __init__(self,name,age,career):
+        #sending the parameters to the Super o Father class' cosntructor
         super().__init__(name,age)
+
         self.career=career
+
+    #overriding the inherited method
+    def hi(self):
+        print("Hi, I am "+self.name+"and I'm an "+self.career)
 
 
 #creating an instance of the method
@@ -81,12 +88,17 @@ print(hector.get_age())
 #    ^^^^^^^^^^^^^
 #AttributeError: 'People' object has no attribute '__some'
 
+
 bart = Bartender("bart",12)
 bart.hi()
+#invoking new method that parents class do not have.
 bart.welcome()
 
+
 lu = Student("Lu",21,"Engineer")
+#method inherited from People class, modified in cild class
 lu.hi()
+#getting a field that the People class do not have.
 print(lu.career)
 
 
