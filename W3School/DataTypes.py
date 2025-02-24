@@ -1,0 +1,62 @@
+x = "Hello, World!"
+print(type(x),x)
+x = 20
+print(type(x),x)
+x=20.5
+print(type(x),x)
+x=1j
+print(type(x),x)
+x=["apple","banana","cherry"]
+print(type(x),x)
+x=("apple","banana","cherry")
+print(type(x),x)
+x=range(6)
+print(type(x),x)
+x={"name":"john","age":36}
+print(type(x),x)
+x={"apple","banana","cherry"}
+print(type(x),x)
+x=frozenset({"apple","banana","cherry"})
+print(type(x),x)
+x=None
+print(type(x),x)
+
+
+x = str("Hello, World!")
+print(type(x),x)
+x = int(20)
+print(type(x),x)
+x=float(20.5)
+print(type(x),x)
+x=complex(1j)
+print(type(x),x)
+x=list(["apple","banana","cherry"])
+print(type(x),x)
+x=list(("apple","banana","cherry"))
+print(type(x),x)
+x=tuple(("apple","banana","cherry"))
+print(type(x),x)
+x=range(6)
+print(type(x),x)
+x=dict({"name":"john","age":36})
+print(type(x),x)
+x=dict(name="john",age=36)
+print(type(x),x)
+x=set({"apple","banana","cherry"})
+print(type(x),x)
+x=set(("apple","banana","cherry"))
+print(type(x),x)
+x=frozenset({"apple","banana","cherry"})
+print(type(x),x)
+x=frozenset(("apple","banana","cherry"))
+print(type(x),x)
+x=None
+print(type(x),x)
+x=bool(5)
+print(type(x),x)
+x=bytes(5)
+print(type(x),x)
+x=bytearray(5)
+print(type(x),x)
+x= memoryview(bytes(5))
+print(type(x),x)
